@@ -7,7 +7,7 @@ export default function aiRoutes(upload) {
 
     // Lascio che siano i controller a rispondere con res.json
     router.post("/process", upload.array("documents", 10), processDocuments);
-    router.post("/process-single", upload.single("document"), processSingleDocument);
+    router.post("/process-single", upload.single('document'), processSingleDocument);
 
     return router;
 }

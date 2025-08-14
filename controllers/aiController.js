@@ -5,9 +5,6 @@ import logger from "../utils/logger.js"; // Importa il logger personalizzato
 export async function processSingleDocument(req, res) {
     try {
         logger.info("[processSingleDocument] Inizio elaborazione singolo documento");
-        if (!process.env.ANTHROPIC_KEY) {
-            logger.warn("Controller: Anthropic API key non impostata (manca ANTHROPIC_KEY/ANTHROPIC_API_KEY).");
-        }
 
         if (!req.file) {
             logger.warn("[processSingleDocument] Nessun file caricato");
