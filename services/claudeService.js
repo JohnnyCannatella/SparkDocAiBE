@@ -12,7 +12,6 @@ import config from "../config/env.js";
  * @returns {Promise<string>} - Il testo estratto dal PDF.
  */
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY });
-
 export async function extractTextFromPdfBuffer(buffer) {
     if (!buffer) {
         logger.warn("[extractTextFromPdfBuffer] Nessun buffer fornito");
