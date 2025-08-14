@@ -45,3 +45,4 @@ next-env.d.ts
 /api/node_modules/
 /web/node_modules/
 /web/.next/
+/.idea/
