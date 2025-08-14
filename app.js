@@ -51,7 +51,6 @@ app.use((req, res, next) => {
     next(createError(404));
 });
 
-// Debug endpoint
 app.get("/debug/env", (_req, res) => {
     res.json({
         ANTHROPIC_API_KEY_present: Boolean(process.env.ANTHROPIC_API_KEY),
