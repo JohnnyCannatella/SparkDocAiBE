@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import logger from "../utils/logger.js";
 import dotenv from 'dotenv';
+dotenv.config();
 
 // Configura l'istanza di Anthropic
 

@@ -19,6 +19,7 @@ import aiRoutes from './routes/aiRoutes.js';
 // __dirname / __filename polyfill per ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+dotenv.config();
 
 // Initialize Express app
 const app = express();
