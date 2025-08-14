@@ -67,11 +67,10 @@ app.use((err, req, res, next) => {
 });
 
 // Avvio server
-if (config.NODE_ENV !== 'production') {
-    const port = config.APP_PORT || 8080;
-    app.listen(port, () => {
-        console.log(`Server is listening on port ${port}`);
-    });
-}
+const port = process.env.PORT || config.APP_PORT || 8080;
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
+
 
 export default app;
