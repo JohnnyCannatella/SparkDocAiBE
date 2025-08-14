@@ -11,12 +11,18 @@ import dotenv from 'dotenv';
  * @param {Buffer} buffer - Il buffer del PDF da analizzare.
  * @returns {Promise<string>} - Il testo estratto dal PDF.
  */
-const apiKey = process.env.ANTHROPIC_KEY;
-if (!apiKey) {
-    throw new Error("Missing Anthropic API key in env");
-}
-const anthropic = new Anthropic({ apiKey });
+let anthropicSingleton = null;
 
+function getAnthropic() {
+    const apiKey = process.env.ANTHROPIC_KEY;
+    if (!apiKey) {
+        throw new Error("Missing Anthropic API key (ANTHROPIC_API_KEY/ANTHROPIC_KEY)");
+    }
+    if (!anthropicSingleton) {
+        anthropicSingleton = new Anthropic({ apiKey });
+    }
+    return anthropicSingleton;
+}
 export async function extractTextFromPdfBuffer(buffer) {
     if (!buffer) {
         logger.warn("[extractTextFromPdfBuffer] Nessun buffer fornito");
@@ -293,7 +299,7 @@ ${text}
 async function queryClaude(text) {
     const system = buildClaudeSystemPrompt();
     const user = buildClaudeUserContent(text);
-
+    const anthropic = getAnthropic();
     logger.info("[queryClaude] Invio richiesta a Claude (lunghezze) system:", system.length, "user:", user.length);
 
     try {
