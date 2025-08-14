@@ -11,7 +11,8 @@ import config from "../config/env.js";
  * @param {Buffer} buffer - Il buffer del PDF da analizzare.
  * @returns {Promise<string>} - Il testo estratto dal PDF.
  */
-const anthropic = new Anthropic({ apiKey: config.ANTHROPIC_KEY });
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY });
+
 export async function extractTextFromPdfBuffer(buffer) {
     if (!buffer) {
         logger.warn("[extractTextFromPdfBuffer] Nessun buffer fornito");
@@ -295,7 +296,8 @@ async function queryClaude(text) {
         const startTime = Date.now();
 
         const response = await anthropic.messages.create({
-            model: "claude-3-5-sonnet-20240620",
+            //model: "claude-3-5-sonnet-20240620",
+            model: "claude-3-5-haiku-20241022",
             temperature: 0,
             top_p: 1,
             max_tokens: 2048,
