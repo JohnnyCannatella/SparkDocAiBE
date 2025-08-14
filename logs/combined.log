@@ -1,0 +1,258 @@
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T17:10:49.214Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T17:10:49.219Z"}
+{"level":"error","message":"[processSingleDocument] Errore: Unexpected token 'I', \"I apologiz\"... is not valid JSON","stack":"SyntaxError: Unexpected token 'I', \"I apologiz\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at extractDataWithClaudeFromBuffer (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:37:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async processSingleDocument (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/controllers/aiController.js:24:24)","timestamp":"2025-08-13T17:10:50.678Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T17:14:01.125Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T17:14:01.127Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T17:14:01.128Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T17:14:01.128Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T17:14:01.235Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T17:14:01.235Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T17:14:01.235Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T17:14:07.698Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T17:14:07.698Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T17:15:55.395Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T17:15:55.399Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T17:15:55.399Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T17:15:55.399Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T17:15:55.510Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T17:15:55.510Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T17:15:55.510Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T17:16:02.140Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"PRNFRC58H23B300H","Codice_IBAN":"","Codice_REMI":"34405900","Cognome":"PARINI","Comune":"PARABIAGO","Comune_3":"PARABIAGO","Consumo_annuo_Smc":"4531","Consumo_annuo_kWh":"","Data":"30/06/2025","Data_emissione":"09/07/2025","Data_nascita":"","Data_scadenza":"29/07/2025","Distributore":"AEMME LINEA DISTRIBUZIONE SRL","Distributore_2":"","Email":"clienti@unoenergy.it","Indirizzo_fornitura":"VIA SEBASTIANO CABOTO 14","Indirizzo_residenza":"VIA SEBASTIANO CABOTO 14","Nome":"FERRUCCIO","Numero_documento":"","Potenza_disponibile_kW":"","Potenza_impegnata_kW":"","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":""},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T17:16:02.141Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T17:16:02.141Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T17:25:31.542Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T17:25:31.542Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T17:25:31.542Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T17:25:31.542Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T17:25:31.606Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T17:25:31.607Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T17:25:31.607Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T17:25:38.058Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"PRNFRC58H23B300H","Codice_IBAN":"","Codice_REMI":"34405900","Cognome":"PARINI","Comune":"PARABIAGO","Comune_3":"PARABIAGO","Consumo_annuo_Smc":"4531","Consumo_annuo_kWh":"","Data":"30/06/2025","Data_emissione":"09/07/2025","Data_nascita":"","Data_scadenza":"29/07/2025","Distributore":"AEMME LINEA DISTRIBUZIONE SRL","Distributore_2":"","Email":"clienti@unoenergy.it","Indirizzo_fornitura":"VIA SEBASTIANO CABOTO 14","Indirizzo_residenza":"VIA SEBASTIANO CABOTO 14","Nome":"FERRUCCIO","Numero_documento":"","Potenza_disponibile_kW":"","Potenza_impegnata_kW":"","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":""},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T17:25:38.058Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T17:25:38.058Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T18:00:00.834Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T18:00:00.834Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T18:00:00.834Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T18:00:00.834Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T18:00:00.843Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T18:00:00.843Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T18:00:00.844Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T18:00:04.377Z"}
+{"json":{"CAP":"","CAP_3":"","Cellulare":"","Civico_3":"","Codice_Fiscale":"","Codice_IBAN":"","Codice_REMI":"","Cognome":"","Comune":"","Comune_3":"","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"","Data":"","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"","Distributore_2":"","Email":"","Indirizzo_fornitura":"","Indirizzo_residenza":"","Nome":"","Numero_documento":"","Potenza_disponibile_kW":"","Potenza_impegnata_kW":"","Provincia":"","Provincia_3":"","Telefono_fisso_altro":"","Tensione_V":""},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T18:00:04.378Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T18:00:04.379Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T18:00:37.053Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T18:00:37.053Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T18:00:37.053Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T18:00:37.053Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T18:00:37.105Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T18:00:37.105Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T18:00:37.105Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T18:00:43.392Z"}
+{"level":"warn","message":"[queryClaude] JSON malformato, tentativo di riparazione","timestamp":"2025-08-13T18:00:43.393Z"}
+{"level":"error","message":"[queryClaude] Errore durante la chiamata a Claude: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON","stack":"SyntaxError: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at queryClaude (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:80:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async extractDataWithClaudeFromBuffer (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:119:16)\n    at async processSingleDocument (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/controllers/aiController.js:24:24)","timestamp":"2025-08-13T18:00:43.393Z"}
+{"level":"error","message":"[extractDataWithClaudeFromBuffer] Errore durante estrazione dati: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON","stack":"SyntaxError: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at queryClaude (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:80:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async extractDataWithClaudeFromBuffer (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:119:16)\n    at async processSingleDocument (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/controllers/aiController.js:24:24)","timestamp":"2025-08-13T18:00:43.394Z"}
+{"level":"error","message":"[processSingleDocument] Errore: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON","stack":"SyntaxError: Unexpected token 'E', \"Ecco i dat\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at queryClaude (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:80:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async extractDataWithClaudeFromBuffer (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/services/claudeService.js:119:16)\n    at async processSingleDocument (file:///Users/johnnycannatella/WebstormProjects/sparkdocai/api/controllers/aiController.js:24:24)","timestamp":"2025-08-13T18:00:43.394Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T18:00:59.336Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T18:00:59.336Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T18:00:59.336Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T18:00:59.336Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T18:00:59.417Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T18:00:59.417Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T18:00:59.417Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T18:01:05.737Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"Parabiago","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"4816","Data":"13.06.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"DUERETI S.R.L.","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"5","Potenza_impegnata_kW":"4.5","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":"220"},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T18:01:05.738Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T18:01:05.738Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T18:46:59.594Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T18:46:59.594Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T18:46:59.594Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T18:46:59.594Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T18:46:59.661Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T18:46:59.661Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T18:46:59.661Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T18:47:06.977Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"Parabiago","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"4816","Data":"13.06.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"DUERETI S.R.L.","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"5","Potenza_impegnata_kW":"4.5","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":"220"},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T18:47:06.978Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T18:47:06.978Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T18:56:01.851Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T18:56:01.851Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T18:56:01.851Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T18:56:01.852Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T18:56:01.935Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T18:56:01.936Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T18:56:01.936Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T18:56:08.189Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"Parabiago","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"4816","Data":"13.06.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"DUERETI S.R.L.","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"5","Potenza_impegnata_kW":"4.5","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":"220"},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T18:56:08.190Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T18:56:08.190Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:01:54.047Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:01:54.047Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:01:54.047Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:01:54.047Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:01:54.129Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:01:54.129Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T19:01:54.129Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:02:00.459Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"PARABIAGO","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"4816","Data":"13.06.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"DUERETI S.R.L.","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"5","Potenza_impegnata_kW":"4.5","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":"220"},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T19:02:00.460Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:02:00.460Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:08:58.315Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:08:58.315Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:08:58.315Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:08:58.315Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:08:58.372Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:08:58.372Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T19:08:58.372Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:08:58.375Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:08:58.375Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:08:58.375Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:08:58.375Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:08:58.434Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:08:58.435Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude con prompt di","timestamp":"2025-08-13T19:08:58.435Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:09:04.597Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"34405900","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"Parabiago","Consumo_annuo_Smc":"2760.8","Consumo_annuo_kWh":"","Data":"16.05.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"AEMME LINEA DISTRIBUZIONE SRL","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"","Potenza_impegnata_kW":"","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":""},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T19:09:04.597Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:09:04.598Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:09:04.666Z"}
+{"json":{"CAP":"20015","CAP_3":"20015","Cellulare":"","Civico_3":"","Codice_Fiscale":"CZZMRG32L03G324T","Codice_IBAN":"","Codice_REMI":"","Cognome":"COZZI","Comune":"PARABIAGO","Comune_3":"Parabiago","Consumo_annuo_Smc":"","Consumo_annuo_kWh":"4816","Data":"13.06.2025","Data_emissione":"","Data_nascita":"","Data_scadenza":"","Distributore":"DUERETI S.R.L.","Distributore_2":"","Email":"","Indirizzo_fornitura":"VIA CARSO 22","Indirizzo_residenza":"VIA CARSO 22","Nome":"AMBROGIO","Numero_documento":"","Potenza_disponibile_kW":"5","Potenza_impegnata_kW":"4.5","Provincia":"MI","Provincia_3":"MI","Telefono_fisso_altro":"","Tensione_V":"220"},"level":"info","message":"[queryClaude] Risposta JSON ricevuta:","timestamp":"2025-08-13T19:09:04.667Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:09:04.667Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:22:10.471Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:22:10.474Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:22:10.475Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:22:10.475Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:22:10.591Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:22:10.591Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:22:10.592Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:22:18.068Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo","timestamp":"2025-08-13T19:22:18.068Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:22:18.068Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:23:41.962Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:23:41.962Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:23:41.962Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:23:41.962Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:23:41.976Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:23:41.977Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:23:41.977Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:23:46.764Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo","timestamp":"2025-08-13T19:23:46.764Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:23:46.764Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:24:55.406Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:24:55.406Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:24:55.406Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:24:55.406Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:24:55.412Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:24:55.412Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:24:55.412Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:25:00.287Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo","timestamp":"2025-08-13T19:25:00.287Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:25:00.287Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:29:04.150Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:29:04.151Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:29:04.151Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:29:04.151Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:29:04.159Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:29:04.159Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:29:04.159Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:29:09.010Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo","timestamp":"2025-08-13T19:29:09.011Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:29:09.011Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:31:14.638Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:31:14.641Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:31:14.642Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:31:14.642Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:31:14.693Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:31:14.693Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:31:14.693Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:31:19.634Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"AMBROGIO\",\"Cognome\":\"COZZI\",\"Indirizzo_residenza\":\"VIA CARSO\",\"CAP\":\"20015\",\"Comune\":\"Parabiago\",\"Provincia\":\"MI\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"202530933282\",\"Data_emissione\":\"2025-05-16\",\"Data_scadenza\":\"2025-06-05\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"VIA CARSO\",\"Civico_3\":\"22\",\"CAP_3\":\"20015\",\"Comune_3\":\"Parabiago\",\"Provincia_3\":\"MI\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"AEMME LINEA DISTRIBUZIONE SRL\",\"Codice_REMI\":\"34405900\",\"Consumo_annuo_Smc\":\"2760.8\",\"Distributore_2\":\"\",\"Data\":\"2025-05-16\"}","timestamp":"2025-08-13T19:31:19.634Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:31:19.635Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:40:27.255Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:40:27.258Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:40:27.258Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:40:27.258Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:40:27.320Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:40:27.320Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:40:27.320Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:40:30.996Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"\",\"Cognome\":\"\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"\",\"Data_scadenza\":\"\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-13T19:40:30.996Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:40:30.997Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:44:02.778Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:44:02.778Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:44:02.779Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:44:02.779Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:44:02.860Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:44:02.860Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:44:02.860Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:44:10.180Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"FERRUCCIO\",\"Cognome\":\"PARINI\",\"Indirizzo_residenza\":\"VIA SEBASTIANO CABOTO 14\",\"CAP\":\"20015\",\"Comune\":\"PARABIAGO\",\"Provincia\":\"MI\",\"Codice_Fiscale\":\"PRNFRC58H23B300H\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"09/07/2025\",\"Data_scadenza\":\"29/07/2025\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"VIA SEBASTIANO CABOTO 14\",\"Civico_3\":\"\",\"CAP_3\":\"20015\",\"Comune_3\":\"PARABIAGO\",\"Provincia_3\":\"MI\",\"Tensione_V\":\"220\",\"Potenza_impegnata_kW\":\"6,00\",\"Potenza_disponibile_kW\":\"6,60\",\"Consumo_annuo_kWh\":\"4148\",\"Distributore\":\"DUERETI S.R.L.\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"30/06/2025\"}","timestamp":"2025-08-13T19:44:10.181Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:44:10.183Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:44:26.294Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:44:26.295Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:44:26.295Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:44:26.295Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:44:26.370Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:44:26.370Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:44:26.370Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:44:33.359Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"SIMONA\",\"Cognome\":\"FOLTRAN\",\"Indirizzo_residenza\":\"VIA BENEDETTO CROCE 2\",\"CAP\":\"20015\",\"Comune\":\"PARABIAGO\",\"Provincia\":\"MI\",\"Codice_Fiscale\":\"FLTSMN80R67F205E\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"16/07/2025\",\"Data_scadenza\":\"07/08/2025\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"VIA BENEDETTO CROCE 2\",\"Civico_3\":\"\",\"CAP_3\":\"20015\",\"Comune_3\":\"PARABIAGO\",\"Provincia_3\":\"MI\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"AEMME LINEA DISTRIBUZIONE SRL\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"176,666355\",\"Distributore_2\":\"\",\"Data\":\"30/06/2025\"}","timestamp":"2025-08-13T19:44:33.360Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:44:33.361Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:47:53.644Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:47:53.647Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:47:53.647Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:47:53.648Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:47:53.764Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:47:53.764Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:47:53.764Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:48:01.649Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"AMBROGIO\",\"Cognome\":\"COZZI\",\"Indirizzo_residenza\":\"VIA CARSO\",\"CAP\":\"20015\",\"Comune\":\"PARABIAGO\",\"Provincia\":\"MI\",\"Codice_Fiscale\":\"CZZMRG32L03G324T\",\"Data_nascita\":\"\",\"Numero_documento\":\"202530933282\",\"Data_emissione\":\"2025-05-16\",\"Data_scadenza\":\"2025-06-05\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"VIA CARSO\",\"Civico_3\":\"22\",\"CAP_3\":\"20015\",\"Comune_3\":\"PARABIAGO\",\"Provincia_3\":\"MI\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"34405900\",\"Consumo_annuo_Smc\":\"2760.8\",\"Distributore_2\":\"AEMME LINEA DISTRIBUZIONE SRL\",\"Data\":\"2025-05-16\"}","timestamp":"2025-08-13T19:48:01.650Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:48:01.651Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-13T19:48:19.862Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-13T19:48:19.862Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-13T19:48:19.862Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-13T19:48:19.862Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-13T19:48:19.873Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-13T19:48:19.873Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-13T19:48:19.873Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-13T19:48:23.757Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"\",\"Cognome\":\"\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"\",\"Data_scadenza\":\"\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-13T19:48:23.757Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-13T19:48:23.758Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-14T06:28:12.735Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-14T06:28:12.739Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-14T06:28:12.739Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-14T06:28:12.739Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-14T06:28:12.803Z"}
+{"level":"info","message":"\n\n\n\n","timestamp":"2025-08-14T06:28:12.803Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-14T06:28:12.803Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-14T06:28:12.803Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-14T06:28:17.242Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"\",\"Cognome\":\"\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"\",\"Data_scadenza\":\"\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-14T06:28:17.242Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-14T06:28:17.243Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-14T06:52:36.271Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-14T06:52:36.274Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-14T06:52:36.274Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-14T06:52:36.274Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-14T06:52:36.329Z"}
+{"level":"info","message":"\n\n","timestamp":"2025-08-14T06:52:36.329Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-14T06:52:36.329Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-14T06:52:36.329Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-14T06:52:40.122Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"\",\"Cognome\":\"\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"\",\"Data_scadenza\":\"\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-14T06:52:40.122Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-14T06:52:40.122Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-14T06:53:40.771Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-14T06:53:40.774Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-14T06:53:40.775Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-14T06:53:40.775Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-14T06:53:40.838Z"}
+{"level":"info","message":"\n\n\n\n","timestamp":"2025-08-14T06:53:40.838Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-14T06:53:40.838Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-14T06:53:40.839Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-14T06:53:44.506Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"\",\"Cognome\":\"\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"\",\"Numero_documento\":\"\",\"Data_emissione\":\"\",\"Data_scadenza\":\"\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-14T06:53:44.506Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-14T06:53:44.507Z"}
+{"level":"info","message":"[processSingleDocument] Inizio elaborazione singolo documento","timestamp":"2025-08-14T07:04:39.431Z"}
+{"level":"info","message":"[processSingleDocument] File valido, avvio estrazione dati","timestamp":"2025-08-14T07:04:39.434Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer","timestamp":"2025-08-14T07:04:39.434Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Avvio parsing PDF","timestamp":"2025-08-14T07:04:39.434Z"}
+{"level":"info","message":"[extractTextFromPdfBuffer] Parsing completato, lunghezza testo:","timestamp":"2025-08-14T07:04:39.663Z"}
+{"level":"info","message":"\n\n\"  SCADENZA 02/08/2026 \" \nBU \n‘Cognome \n2  \no \n3 \nDt \ni \nluogo \nol  \net \n4. \nData \ne \nriaacio. \no \nd  \noo \nde.   \ns \n® \nMumero \nel  \ns \nT \n8 \n7Vl \no \n5  \n12 \no \n12,71 Utosoo00oy 01 AG 0344173 \n\nCognome.. % È \n|  Nome MARCELLO \nImpronta del dito \nindice sinistro . \nDir. Segr. € o.zf \nDir. C1€5.16. \n1.  GRASSI \n2.  MARCELLO \n3.  02108774 NOV \n10.22/08/2016 4e.  MiIT-UBO \n4.02/08/2023 i \n5.  U18228975U ","timestamp":"2025-08-14T07:04:39.663Z"}
+{"level":"info","message":"[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude","timestamp":"2025-08-14T07:04:39.663Z"}
+{"level":"info","message":"[queryClaude] Invio richiesta a Claude (lunghezze) system:","timestamp":"2025-08-14T07:04:39.663Z"}
+{"level":"info","message":"[queryClaude] Risposta ricevuta in","timestamp":"2025-08-14T07:04:43.757Z"}
+{"level":"info","message":"[queryClaude] Risposta JSON ricevuta con successo: {\"Nome\":\"MARCELLO\",\"Cognome\":\"GRASSI\",\"Indirizzo_residenza\":\"\",\"CAP\":\"\",\"Comune\":\"\",\"Provincia\":\"\",\"Codice_Fiscale\":\"\",\"Data_nascita\":\"1974-11-08\",\"Numero_documento\":\"U18228975U\",\"Data_emissione\":\"2016-08-22\",\"Data_scadenza\":\"2026-08-02\",\"Cellulare\":\"\",\"Telefono_fisso_altro\":\"\",\"Email\":\"\",\"Codice_IBAN\":\"\",\"Indirizzo_fornitura\":\"\",\"Civico_3\":\"\",\"CAP_3\":\"\",\"Comune_3\":\"\",\"Provincia_3\":\"\",\"Tensione_V\":\"\",\"Potenza_impegnata_kW\":\"\",\"Potenza_disponibile_kW\":\"\",\"Consumo_annuo_kWh\":\"\",\"Distributore\":\"\",\"Codice_REMI\":\"\",\"Consumo_annuo_Smc\":\"\",\"Distributore_2\":\"\",\"Data\":\"\"}","timestamp":"2025-08-14T07:04:43.757Z"}
+{"level":"info","message":"[processSingleDocument] Elaborazione completata con successo","timestamp":"2025-08-14T07:04:43.758Z"}
