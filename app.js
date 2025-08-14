@@ -51,13 +51,6 @@ app.use((req, res, next) => {
     next(createError(404));
 });
 
-app.get("/debug/env", (_req, res) => {
-    res.json({
-        ANTHROPIC_API_KEY_present: Boolean(process.env.ANTHROPIC_API_KEY),
-        revision: process.env.K_REVISION
-    });
-});
-
 // error handler
 app.use((err, req, res, next) => {
     res.locals.message = err.message;
@@ -77,6 +70,7 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || config.APP_PORT || 8080;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
+    console.log(`Server is listening on port ${process.env.ANTHROPIC_KEY}`);
 });
 
 
