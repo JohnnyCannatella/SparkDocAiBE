@@ -11,7 +11,14 @@ import config from "../config/env.js";
  * @param {Buffer} buffer - Il buffer del PDF da analizzare.
  * @returns {Promise<string>} - Il testo estratto dal PDF.
  */
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_KEY });
+const apiKey =
+    process.env.ANTHROPIC_API_KEY ??
+    process.env.ANTHROPIC_KEY; // fallback
+if (!apiKey) {
+    throw new Error("Missing Anthropic API key in env");
+}
+const anthropic = new Anthropic({ apiKey });
+
 export async function extractTextFromPdfBuffer(buffer) {
     if (!buffer) {
         logger.warn("[extractTextFromPdfBuffer] Nessun buffer fornito");
@@ -343,7 +350,6 @@ export async function extractDataWithClaudeFromBuffer(buffer) {
         // Estrai il testo dal PDF
         logger.info("[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer");
         const pdfText = await extractTextFromPdfBuffer(buffer);
-        logger.info(pdfText);
         // Chiama Claude per estrarre dati dal testo (schema e regole sono nel system prompt)
         logger.info("[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude");
         // 1) Chiamata al modello
