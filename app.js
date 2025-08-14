@@ -13,15 +13,12 @@ import { fileURLToPath } from 'url';
 import cors from 'cors';
 
 // Internal dependencies
-import config from './config/env.js';
 import indexRouter from './routes/index.js';
 import aiRoutes from './routes/aiRoutes.js';
 
 // __dirname / __filename polyfill per ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-console.log(`Running in ${config.NODE_ENV} mode`);
 
 // Initialize Express app
 const app = express();
@@ -67,10 +64,10 @@ app.use((err, req, res, next) => {
 });
 
 // Avvio server
-const port = process.env.PORT || config.APP_PORT || 8080;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
-    console.log(`Server is listening on port ${process.env.ANTHROPIC_KEY}`);
+    console.log(`Key ${process.env.ANTHROPIC_KEY}`);
 });
 
 

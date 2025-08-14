@@ -2,7 +2,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import logger from "../utils/logger.js";
-import config from "../config/env.js";
+import dotenv from 'dotenv';
 
 // Configura l'istanza di Anthropic
 
@@ -11,9 +11,7 @@ import config from "../config/env.js";
  * @param {Buffer} buffer - Il buffer del PDF da analizzare.
  * @returns {Promise<string>} - Il testo estratto dal PDF.
  */
-const apiKey =
-    process.env.ANTHROPIC_API_KEY ??
-    process.env.ANTHROPIC_KEY; // fallback
+const apiKey = process.env.ANTHROPIC_KEY;
 if (!apiKey) {
     throw new Error("Missing Anthropic API key in env");
 }
