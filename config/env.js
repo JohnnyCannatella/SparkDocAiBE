@@ -21,7 +21,7 @@ try {
 
 export default {
     NODE_ENV: env,
-    APP_PORT: process.env.APP_PORT || 3002,
+    APP_PORT: process.env.APP_PORT || 8080,
     FRONTEND_URL: process.env.FRONTEND_URL || 'https://www.sparkdocai.com',
     ANTHROPIC_KEY: process.env.ANTHROPIC_KEY
 };
