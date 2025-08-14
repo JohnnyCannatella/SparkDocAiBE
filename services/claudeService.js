@@ -3,9 +3,6 @@ import Anthropic from "@anthropic-ai/sdk";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import logger from "../utils/logger.js";
 import dotenv from 'dotenv';
-dotenv.config();
-
-// Configura l'istanza di Anthropic
 
 /**
  * Funzione per estrarre il testo da un buffer PDF.
@@ -15,6 +12,7 @@ dotenv.config();
 let anthropicSingleton = null;
 
 function getAnthropic() {
+    dotenv.config();
     const apiKey = process.env.ANTHROPIC_KEY;
     if (!apiKey) {
         throw new Error("Missing Anthropic API key (ANTHROPIC_API_KEY/ANTHROPIC_KEY)");
@@ -24,6 +22,7 @@ function getAnthropic() {
     }
     return anthropicSingleton;
 }
+
 export async function extractTextFromPdfBuffer(buffer) {
     if (!buffer) {
         logger.warn("[extractTextFromPdfBuffer] Nessun buffer fornito");

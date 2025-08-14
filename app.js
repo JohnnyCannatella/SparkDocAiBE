@@ -20,6 +20,7 @@ import aiRoutes from './routes/aiRoutes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
+console.log(`test Key ${process.env.ANTHROPIC_KEY}`);
 
 // Initialize Express app
 const app = express();
@@ -68,7 +69,6 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
-    console.log(`Key ${process.env.ANTHROPIC_KEY}`);
 });
 
 
