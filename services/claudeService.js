@@ -2,7 +2,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import logger from "../utils/logger.js";
-import dotenv from 'dotenv';
 
 /**
  * Funzione per estrarre il testo da un buffer PDF.
@@ -12,7 +11,6 @@ import dotenv from 'dotenv';
 let anthropicSingleton = null;
 
 function getAnthropic() {
-    dotenv.config();
     const apiKey = process.env.ANTHROPIC_KEY;
     if (!apiKey) {
         throw new Error("Missing Anthropic API key (ANTHROPIC_API_KEY/ANTHROPIC_KEY)");

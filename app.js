@@ -19,8 +19,14 @@ import aiRoutes from './routes/aiRoutes.js';
 // __dirname / __filename polyfill per ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-dotenv.config();
-console.log(`test Key ${process.env.ANTHROPIC_KEY}`);
+
+if (process.env.NODE_ENV !== 'production') {
+    dotenv.config();
+}
+
+if (!process.env.ANTHROPIC_KEY) {
+    console.warn("Anthropic API key non impostata (manca ANTHROPIC_KEY/ANTHROPIC_API_KEY).");
+}
 
 // Initialize Express app
 const app = express();
