@@ -269,6 +269,8 @@ SCHEMA DI OUTPUT (ordine e chiavi fissi):
   "Potenza_disponibile_kW": "",
   "Consumo_annuo_kWh": "",
   "Distributore": "",
+  "POD": "",
+  "PDR": "",
   "Codice_REMI": "",
   "Consumo_annuo_Smc": "",
   "Distributore_2": "",

@@ -14,6 +14,8 @@ import cors from 'cors';
 // Internal dependencies
 import indexRouter from './routes/index.js';
 import aiRoutes from './routes/aiRoutes.js';
+import templatesRoutes from './routes/templateRoutes.js';
+import contractRoutes from './routes/contractRoutes.js';
 import * as dotenv from "dotenv";
 
 // __dirname / __filename polyfill per ESM
@@ -51,7 +53,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotte
 app.use('/', indexRouter);
-app.use('/api/ai', aiRoutes(upload));
+app.use('/api/ai',
+    aiRoutes(upload));
+app.use('/api/templates',
+    templatesRoutes(upload));
+app.use('/api/match',
+    contractRoutes(upload));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
