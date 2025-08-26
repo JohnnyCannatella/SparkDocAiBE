@@ -2,6 +2,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import logger from "../utils/logger.js";
+import {extractTextPreferPdfParseThenDocAI} from "./textExtractionServiceFirebase.js";
 
 /**
  * Funzione per estrarre il testo da un buffer PDF.
@@ -171,7 +172,7 @@ FLUSSO DI LAVORO (OBBLIGATORIO):
 
 3) NORMALIZZAZIONE (OBBLIGATORIA):
    - Tutti i valori sono stringhe.
-   - Date in formato YYYY-MM-DD. Converti da DD/MM/YYYY, DD-MM-YYYY, YYYYMMDD, MRZ (YYMMDD → usa 19/20 in base a plausibilità; se ambigua, "").
+   - Date: formato DD-MM-YYYY (accetta input tipo dd/mm/yyyy, dd.mm.yyyy).
    - CAP a 5 cifre (altrimenti "").
    - Provincia a 2 lettere maiuscole (es. MI, RM). Se trovi nome esteso, mappalo alla sigla; se dubbio, "".
    - Numeri tecnici senza unità: 
@@ -227,6 +228,7 @@ VOCABOLARIO ETICHETTE (sinonimi/regex utili, non esaustivi):
 - Comune: "Comune", "Città", "Località".
 - Provincia: "Prov.", "Provincia".
 - Numero documento: "Numero documento", "N. doc.", "Doc No", "Passport No", "Carta identità n.".
+- Numero contratto: "Numero contratto", "N. contratto", "Contratto No", "Contract No", "Codice contratto".
 - Data emissione/rilascio: "Data emissione", "Data rilascio", "Rilasciato il", "Issue date".
 - Data scadenza: "Scadenza", "Data scadenza", "Validità fino al", "Expiry date".
 - Codice Fiscale: "Codice Fiscale", "C.F.", "CF".
@@ -239,7 +241,7 @@ REGOLE DI OUTPUT:
 - Formato: un unico oggetto JSON.
 - Tipi: tutti i valori sono stringhe.
 - Mancanze o ambiguità: usa "".
-- Normalizzazione: (date YYYY-MM-DD; CAP a 5 cifre; Provincia a 2 lettere; numeri senza unità; IBAN/CF maiuscoli; indirizzi separati quando possibile).
+- Normalizzazione: (date DD-MM-YYYY; CAP a 5 cifre; Provincia a 2 lettere; numeri senza unità; IBAN/CF maiuscoli; indirizzi separati quando possibile).
 - Commodity: se vedi PDR/REMI → Gas; se POD/Tensione/Potenza → Elettricità. Campi non pertinenti alla commodity → "".
 
 SCHEMA DI OUTPUT (ordine e chiavi fissi):
@@ -253,6 +255,7 @@ SCHEMA DI OUTPUT (ordine e chiavi fissi):
   "Codice_Fiscale": "",
   "Data_nascita": "",
   "Numero_documento": "",
+  "Numero_contratto": "",
   "Data_emissione": "",
   "Data_scadenza": "",
   "Cellulare": "",
@@ -294,9 +297,11 @@ ${text}
 /**
  * Effettua una chiamata a Claude per l'estrazione dei dati.
  * @param {string} text - Il testo estratto dal PDF.
+ * @param systemPrompt
  * @returns {Promise<any>} - I dati estratti da Claude in formato JSON.
  */
-async function queryClaude(text) {
+async function queryClaude(text, systemPrompt) {
+    logger.info("[queryClaude] Avvio richiesta a Claude (lunghezze) system:", systemPrompt?.length, "user:", text.length);
     const system = buildClaudeSystemPrompt();
     const user = buildClaudeUserContent(text);
     const anthropic = getAnthropic();
@@ -310,7 +315,7 @@ async function queryClaude(text) {
             model: "claude-3-5-haiku-20241022",
             temperature: 0,
             top_p: 1,
-            max_tokens: 2048,
+            max_tokens: 4000,
             system,
             messages: [{ role: "user", content: user }],
         });
@@ -342,38 +347,42 @@ async function queryClaude(text) {
 /**
  * Estrattore dei dati principali da un buffer PDF usando Claude.
  * @param {Buffer} buffer - Il buffer del PDF.
+ * @param systemPrompt
  * @returns {Promise<any>} - I dati estratti in formato JSON.
  */
-export async function extractDataWithClaudeFromBuffer(buffer) {
-    if (!buffer) {
-        logger.warn("[extractDataWithClaudeFromBuffer] Nessun buffer fornito");
-        throw new Error("PDF buffer mancante");
+export async function extractDataWithClaudeFromBuffer(buffer, systemPrompt) {
+    const { text, extraction } = await extractTextPreferPdfParseThenDocAI(buffer);
+    if (!text || text.trim().length === 0) {
+        logger.warn("[extractDataWithClaudeFromBuffer] Testo PDF vuoto, non eseguo Claude");
+        throw new Error("Il testo estratto dal PDF è vuoto.");
     }
-
+    logger.info("[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude", {
+        method: extraction?.method,
+        pages: extraction?.pages,
+        textLen: text.length
+    });
+    let rawJson;
     try {
-        // Estrai il testo dal PDF
-        logger.info("[extractDataWithClaudeFromBuffer] Avvio estrazione testo dal buffer");
-        const pdfText = await extractTextFromPdfBuffer(buffer);
-        // Chiama Claude per estrarre dati dal testo (schema e regole sono nel system prompt)
-        logger.info("[extractDataWithClaudeFromBuffer] Avvio analisi tramite Claude");
-        // 1) Chiamata al modello
-        if (pdfText.trim().length === 0) {
-            logger.warn("[extractDataWithClaudeFromBuffer] Testo PDF vuoto, non eseguo Claude");
-            throw new Error("Il testo estratto dal PDF è vuoto.");
-        }
+        rawJson = await queryClaude(text, systemPrompt); // usa 'text', non 'pdfText'
+    } catch (err) {
+        logger.error("[extractDataWithClaudeFromBuffer] Errore chiamata Claude", { message: err.message });
+        throw new Error(`Analisi LLM fallita: ${err.message}`);
+    }
+    let clean = normalizeAndSanitize(robustJsonParse(rawJson));
+    clean = clearCommodityFieldsIfNotPresent(clean, text);
+    return {
+        ...clean
+    };
+}
 
-        const rawJson = await queryClaude(pdfText);
-
-        // 2) Normalizza + sanitizza
-        let clean = normalizeAndSanitize(rawJson);
-
-        // 3) Identity-only / commodity cleanup
-        clean = clearCommodityFieldsIfNotPresent(clean, pdfText);
-
-        return clean;
-    } catch (error) {
-        logger.error("[extractDataWithClaudeFromBuffer] Errore durante estrazione dati:", { message: error.message, stack: error.stack });
-        throw error;
+function robustJsonParse(maybeJson) {
+    if (!maybeJson) return {};
+    if (typeof maybeJson === "object") return maybeJson;
+    const s = String(maybeJson).trim().replace(/^```(?:json)?/i, "").replace(/```$/, "").trim();
+    try { return JSON.parse(s); } catch {
+        const m = s.match(/\{[\s\S]*\}$/);
+        if (m) { try { return JSON.parse(m[0]); } catch {} }
+        return { raw: s };
     }
 }
 

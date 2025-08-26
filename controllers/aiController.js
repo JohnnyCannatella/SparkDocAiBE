@@ -5,10 +5,15 @@ import logger from "../utils/logger.js"; // Importa il logger personalizzato
 export async function processSingleDocument(req, res) {
     try {
         logger.info("[processSingleDocument] Inizio elaborazione singolo documento");
-
         if (!req.file) {
             logger.warn("[processSingleDocument] Nessun file caricato");
             throw new Error("Nessun file caricato");
+        }
+
+        // Estrai il systemPrompt dal corpo della richiesta
+        const { systemPrompt } = req.body;
+        if (systemPrompt) {
+            logger.info("[processSingleDocument] Ricevuto prompt di sistema personalizzato.");
         }
 
         const isPdf =
@@ -19,11 +24,9 @@ export async function processSingleDocument(req, res) {
             logger.warn(`[processSingleDocument] ${errorMessage}`);
             throw new Error(errorMessage);
         }
-
-        logger.info("[processSingleDocument] File valido, avvio estrazione dati");
-        const result = await extractDataWithClaudeFromBuffer(req.file.buffer);
-
-        logger.info("[processSingleDocument] Elaborazione completata con successo");
+        logger.info("[processSingleDocument] Estr. smart (pdf-parse -> Document AI fallback)");
+        const result = await extractDataWithClaudeFromBuffer(req.file.buffer, systemPrompt);
+        logger.info("[processSingleDocument] OK", { extraction: result?.extraction });
         return res.status(200).json({ ok: true, result });
     } catch (err) {
         logger.error(`[processSingleDocument] Errore: ${err.message}`, { stack: err.stack });
