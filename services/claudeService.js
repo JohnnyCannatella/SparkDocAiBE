@@ -48,8 +48,8 @@ async function queryClaude(text, systemPrompt) {
         const startTime = Date.now();
 
         const response = await anthropic.messages.create({
-            //model: "claude-3-5-sonnet-20240620",
-            model: "claude-3-5-haiku-20241022",
+            model: "claude-sonnet-4-20250514",
+            //model: "claude-3-5-haiku-20241022", claude-3-5-haiku-latest, claude-3-7-sonnet-latest
             temperature: 0,
             top_p: 1,
             max_tokens: 1200,
