@@ -52,13 +52,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotte
-app.use('/', indexRouter);
-app.use('/api/ai',
-    aiRoutes(upload));
-app.use('/api/templates',
-    templatesRoutes(upload));
-app.use('/api/match',
-    contractRoutes(upload));
+app.use("/api", indexRouter(upload));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
