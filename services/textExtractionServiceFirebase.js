@@ -1,15 +1,6 @@
 // services/textExtractionServiceFirebase.js
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
-import { DocumentProcessorServiceClient } from "@google-cloud/documentai";
 import logger from "../utils/logger.js";
-
-const {
-    DOC_AI_PROJECT_ID: projectId,
-    DOC_AI_LOCATION: location = "eu",
-    DOC_AI_PROCESSOR_ID: processorId,
-} = process.env;
-
-const docAiClient = new DocumentProcessorServiceClient();
 
 function normalizeText(s = "") {
     return s.replace(/\s+/g, " ").trim();
@@ -64,37 +55,9 @@ async function extractWithPdfParse(buffer, options = {}) {
     }
 }
 
-async function extractWithDocAI(buffer, options = {}) {
-    logger.info("[extractWithDocAI] Inizio OCR con Document AI");
-    const { maxPages } = options;
-    const name = docAiClient.processorPath(projectId, location, processorId);
-    const request = {
-        name,
-        rawDocument: {
-            content: buffer,
-            mimeType: "application/pdf",
-        },
-    };
-    if (maxPages > 0) {
-        request.processOptions = {
-            // Le pagine di Document AI sono 1-based.
-            individualPageSelector: { pages: Array.from({ length: maxPages }, (_, i) => i + 1) },
-        };
-        logger.info(`[extractWithDocAI] Limitando l'elaborazione alle prime ${maxPages} pagine.`);
-    }
-
-    const [resp] = await docAiClient.processDocument(request);
-    const text = normalizeText(resp?.document?.text || "");
-    return {
-        ok: text.length > 0,
-        text,
-        meta: { method: "documentai", processorId, location },
-    };
-}
-
 /**
  * Preferisci pdf-parse. Se pdf-parse fallisce o produce testo vuoto,
- * fai fallback a Document AI. Nessun uso di pdf2pic/gm.
+ * restituisci un errore. Nessun uso di pdf2pic/gm.
  */
 export async function extractTextPreferPdfParseThenDocAI(buffer) {
     const maxPagesToProcess = 4;
@@ -105,12 +68,7 @@ export async function extractTextPreferPdfParseThenDocAI(buffer) {
         return { text: p.text, extraction: { method: "pdf-parse", pages: p.pages } };
     }
 
-    // 2) Fallback: Document AI
-    logger.warn("[extractTextPreferPdfParseThenDocAI] pdf-parse fallito, provo Document AI");
-/*    const d = await extractWithDocAI(buffer, options);
-    if (!d.ok) {
-        const reason = p.error?.message || "pdf-parse empty";
-        throw new Error(`OCR fallback failed (Document AI). Primary reason: ${reason}`);
-    }*/
-    return { text: d.text, extraction: { method: "documentai", ...d.meta } };
+    const reason = p.error?.message || "pdf-parse empty";
+    logger.warn("[extractTextPreferPdfParseThenDocAI] pdf-parse fallito, nessun fallback", { reason });
+    throw new Error(`OCR failed (pdf-parse). Reason: ${reason}`);
 }
